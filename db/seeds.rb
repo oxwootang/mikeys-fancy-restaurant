@@ -4,8 +4,8 @@ Recipe.destroy_all
 Ingredient.destroy_all
 
 3.times do
-  dude = User.new(name: Faker::Name.name, email: Faker::Internet.email)
-  dude.password = "p123"
+  dude = User.new(name: Faker::Name.name, email: Faker::Internet.email, password: 'p123')
+  # dude.password = "p123"
   dude.save
 end
 
