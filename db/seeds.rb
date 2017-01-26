@@ -4,12 +4,14 @@ Recipe.destroy_all
 Ingredient.destroy_all
 
 3.times do
-  dude = User.new(name: Faker::Name.name, email: Faker::Internet.email, password: 'p123')
-  # dude.password = "p123"
-  dude.save
-end
 
-users = User.all
+  # dude = User.new(name: Faker::Name.name, email: Faker::Internet.email, password: 'p123')
+  # dude.password = "p123"
+  # dude.save
+
+  User.create!(name: Faker::Name.name, email: Faker::Internet.email, password: "p123")
+
+end
 
 categories = ["Appetizer", "Salad", "Main Course", "Dessert"]
 
@@ -33,5 +35,3 @@ recipes.each do |recipe|
     recipe.ingredients.create!(name: Faker::Food.ingredient)
   end
 end
-
-ingredients = Ingredient.all
