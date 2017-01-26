@@ -3,12 +3,13 @@ class RecipesController < ApplicationController
   def new
     @category = Category.find params[:category_id]
     @recipe = Recipe.new(:category => @category)
-    @ingredients = @recipe.ingredients
   end
 
   def show
     @category = Category.find(params[:category_id])
     @recipe = Recipe.find(params[:id])
+    @ingredients = @recipe.ingredients
+    @ingredient = Ingredient.new
   end
 
   def edit
@@ -22,7 +23,7 @@ class RecipesController < ApplicationController
     @recipe.category = @category
 
     if @recipe.save
-      redirect_to '/'
+      redirect_to category_recipe_path(@category, @recipe)
     else
       flash.now[:error] = "Could not save recipe"
       render :new
