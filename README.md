@@ -1,8 +1,10 @@
 # MIKEY'S FANCY RESTAURANT: A Recipe Manager App
 
+Deployed at: mikeys-fancy-restaurant.herokuapp.com
+
 ## Motives
 
-An app that lets a restaurant's staff create recipes that will inspire its menu. A way for the staff to crowdsource the menu, enabling it to change each week. This app will streamline the restaurant's innovative processes.
+A web app that lets a restaurant's staff create recipes that will inspire its menu. A way for the staff to crowdsource the menu, enabling it to change each week. This app will streamline the restaurant's innovative processes.
 
 ## Functionalities
 
